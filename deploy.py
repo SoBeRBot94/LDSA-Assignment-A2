@@ -49,6 +49,13 @@ def install_pyspark():
     sudo('python3 -m pip install pyspark')
 
 @task
+def setup_pyspark_env():
+    print("\n \n ----- Setup PySpark Environment ----- \n \n")
+    sudo('echo >> /etc/profile')
+    sudo('echo \'export PYSPARK_PYTHON=/usr/bin/python3\' >> /etc/profile')
+    sudo('echo \'export PYSPARK_DRIVER_PYTHON=/usr/bin/ipython\' >> /etc/profile')
+
+@task
 def set_java_env():
     print("\n \n ----- Setting Java Environment Variables ----- \n \n")
     sudo('echo >> /etc/profile')
@@ -98,6 +105,7 @@ def auto_deploy():
     install_jupyter()
     setup_jupyter_service()
     install_pyspark()
+    setup_pyspark_env()
     set_java_env()
     fetch_spark_tarball()
     extract_spark_tarball()
