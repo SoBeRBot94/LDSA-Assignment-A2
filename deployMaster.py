@@ -6,7 +6,15 @@ from fabric.api import *
 
 env.user = 'ubuntu'
 env.key_filename = '/home/SoBeRBot94/.ssh/soberbot94.pem'
-env.hosts = open('hostfile', 'r').readlines()
+
+with open("hostfile") as hf:
+    for i, line in enumerate(hf):
+        if i == 0:
+            env.hosts = line
+        elif i == 1:
+            workerFIP = line
+        elif i == 2:
+            masterIPv4 = line
 
 @task
 def set_hostname():
@@ -84,12 +92,12 @@ def setup_spark_env():
 @task
 def configure_spark():
     print("\n \n ----- Configure Spark Master Node ----- \n \n")
-    master = run('ifconfig | grep inet\ addr | awk \'FNR ==1 {print $2}\' | cut -d \':\' -f 2')
     run('cp /usr/local/spark/conf/spark-env.sh.template /usr/local/spark/conf/spark-env.sh')
     run('echo >> /usr/local/spark/conf/spark-env.sh')
     run('echo \'export JAVA_HOME=/usr/lib/jvm/default-java\' >> /usr/local/spark/conf/spark-env.sh')
     run('echo \'export SPARK_WORKER_CORES=6\' >> /usr/local/spark/conf/spark-env.sh')
-    run('echo \'export SPARK_MASTER_HOST=%s\' >> /usr/local/spark/conf/spark-env.sh' % master)
+    run('echo \'export SPARK_MASTER_HOST=%s\' >> /usr/local/spark/conf/spark-env.sh' % masterIPv4)
+    run('echo \'%s\' > /usr/local/spark/conf/slaves' % workerFIP)
 
 @task
 def clean_up():
