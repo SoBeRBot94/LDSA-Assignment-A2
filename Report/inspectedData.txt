@@ -1,0 +1,116 @@
+[Row(_c0='Membership of Parliament: see Minutes', words=['membership', 'of', 'parliament:', 'see',
+'minutes']), Row(_c0='Approval of Minutes of previous sitting: see Minutes', words=['approval', 'of',
+'minutes', 'of', 'previous', 'sitting:', 'see', 'minutes']), Row(_c0='Membership of Parliament: see Minutes',
+words=['membership', 'of', 'parliament:', 'see', 'minutes']), Row(_c0='Verification of credentials: see
+Minutes', words=['verification', 'of', 'credentials:', 'see', 'minutes']), Row(_c0='Documents received: see
+Minutes', words=['documents', 'received:', 'see', 'minutes']), Row(_c0='Written statements and oral
+questions (tabling): see Minutes', words=['written', 'statements', 'and', 'oral', 'questions', '(tabling):', 'see',
+'minutes']), Row(_c0='Petitions: see Minutes', words=['petitions:', 'see', 'minutes']), Row(_c0='Texts of
+agreements forwarded by the Council: see Minutes', words=['texts', 'of', 'agreements', 'forwarded', 'by',
+'the', 'council:', 'see', 'minutes']), Row(_c0="Action taken on Parliament's resolutions: see Minutes",
+words=['action', 'taken', 'on', "parliament's", 'resolutions:', 'see', 'minutes']), Row(_c0='Agenda for next
+sitting: see Minutes', words=['agenda', 'for', 'next', 'sitting:', 'see', 'minutes']), Row(_c0='Closure of sitting',
+words=['closure', 'of', 'sitting']), Row(_c0='(The sitting was closed at 7.45 p.m.)', words=['(the', 'sitting',
+'was', 'closed', 'at', '7.45', 'p.m.)']), Row(_c0='Election of Vice-Presidents of the European Parliament
+(deadline for submitting nominations): see Minutes', words=['election', 'of', 'vice-presidents', 'of', 'the',
+'european', 'parliament', '(deadline', 'for', 'submitting', 'nominations):', 'see', 'minutes']), Row(_c0='(The
+sitting was suspended at 12.40 p.m. and resumed at 3.00 p.m.)', words=['(the', 'sitting', 'was', 'suspended',
+'at', '12.40', 'p.m.', 'and', 'resumed', 'at', '3.00', 'p.m.)']), Row(_c0='Election of Quaestors of the European
+Parliament (deadline for submitting nominations): see Minutes', words=['election', 'of', 'quaestors', 'of',
+'the', 'european', 'parliament', '(deadline', 'for', 'submitting', 'nominations):', 'see', 'minutes']),
+Row(_c0='(The sitting was suspended at 3.25 p.m. and resumed at 6.00 p.m.)', words=['(the', 'sitting',
+'was', 'suspended', 'at', '3.25', 'p.m.', 'and', 'resumed', 'at', '6.00', 'p.m.)']), Row(_c0='Agenda for next
+sitting: see Minutes', words=['agenda', 'for', 'next', 'sitting:', 'see', 'minutes']), Row(_c0='Closure of sitting',
+words=['closure', 'of', 'sitting']), Row(_c0='(The sitting was closed at 6.15 p.m.)', words=['(the', 'sitting',
+'was', 'closed', 'at', '6.15', 'p.m.)']), Row(_c0='Opening of the sitting', words=['opening', 'of', 'the', 'sitting']),
+Row(_c0='(The sitting was opened at 9.35 a.m.)', words=['(the', 'sitting', 'was', 'opened', 'at', '9.35',
+'a.m.)']), Row(_c0='Documents received: see Minutes', words=['documents', 'received:', 'see', 'minutes']),
+Row(_c0='Approval of Minutes of previous sitting: see Minutes', words=['approval', 'of', 'minutes', 'of',
+'previous', 'sitting:', 'see', 'minutes']), Row(_c0='Membership of Parliament: see Minutes',
+words=['membership', 'of', 'parliament:', 'see', 'minutes']), Row(_c0='Membership of committees (deadline
+for tabling amendments): see Minutes', words=['membership', 'of', 'committees', '(deadline', 'for', 'tabling',
+'amendments):', 'see', 'minutes']), Row(_c0='(The sitting was suspended at 7 p.m. and resumed at 9
+p.m.)', words=['(the', 'sitting', 'was', 'suspended', 'at', '7', 'p.m.', 'and', 'resumed', 'at', '9', 'p.m.)']),
+Row(_c0='Agenda for next sitting: see Minutes', words=['agenda', 'for', 'next', 'sitting:', 'see', 'minutes']),
+Row(_c0='Closure of sitting', words=['closure', 'of', 'sitting']), Row(_c0='(The sitting was suspended at
+23.25 p.m.)', words=['(the', 'sitting', 'was', 'suspended', 'at', '23.25', 'p.m.)']), Row(_c0='Documents
+received: see Minutes', words=['documents', 'received:', 'see', 'minutes']), Row(_c0='Communication of
+Council common positions: see Minutes', words=['communication', 'of', 'council', 'common', 'positions:',
+'see', 'minutes']), Row(_c0='(The sitting was suspended at 11.35 a.m. and resumed for voting time at
+noon)', words=['(the', 'sitting', 'was', 'suspended', 'at', '11.35', 'a.m.', 'and', 'resumed', 'for', 'voting', 'time',
+'at', 'noon)']), Row(_c0='Approval of Minutes of previous sitting: see Minutes', words=['approval', 'of',
+'minutes', 'of', 'previous', 'sitting:', 'see', 'minutes']), Row(_c0='Committee of Inquiry into the crisis of the
+Equitable Life Assurance Society (extension of mandate): see Minutes', words=['committee', 'of', 'inquiry',
+'into', 'the', 'crisis', 'of', 'the', 'equitable', 'life', 'assurance', 'society', '(extension', 'of', 'mandate):', 'see',
+'minutes']), Row(_c0='Announcement by the President: see Minutes', words=['announcement', 'by', 'the',
+'president:', 'see', 'minutes']), Row(_c0='1.', words=['1.']), Row(_c0='Membership of committees (vote)',
+words=['membership', 'of', 'committees', '(vote)']), Row(_c0='2.', words=['2.']), Row(_c0='Amendment of
+the ACP-EC Partnership Agreement (vote)', words=['amendment', 'of', 'the', 'acp-ec', 'partnership',
+'agreement', '(vote)']), Row(_c0='4.', words=['4.']), Row(_c0='Certification of train drivers operating
+locomotives and trains on the railway system in the Community (vote)', words=['certification', 'of', 'train',
+'drivers', 'operating', 'locomotives', 'and', 'trains', 'on', 'the', 'railway', 'system', 'in', 'the', 'community',
+'(vote)']), Row(_c0='6.', words=['6.']), Row(_c0='Law applicable to non-contractual obligations ("ROME II")
+(vote)', words=['law', 'applicable', 'to', 'non-contractual', 'obligations', '("rome', 'ii")', '(vote)']), Row(_c0='8.',
+words=['8.']), Row(_c0='Seventh and eighth annual reports on arms exports (vote)', words=['seventh',
+'and', 'eighth', 'annual', 'reports', 'on', 'arms', 'exports', '(vote)']), Row(_c0='Corrections to votes and voting
+intentions: see Minutes', words=['corrections', 'to', 'votes', 'and', 'voting', 'intentions:', 'see', 'minutes']),
+Row(_c0='Membership of committees and delegations: see Minutes', words=['membership', 'of',
+'committees', 'and', 'delegations:', 'see', 'minutes']), Row(_c0='Request for waiver of parliamentary
+immunity: see Minutes', words=['request', 'for', 'waiver', 'of', 'parliamentary', 'immunity:', 'see', 'minutes']),
+Row(_c0='Decisions concerning certain documents: see Minutes', words=['decisions', 'concerning',
+'certain', 'documents:', 'see', 'minutes']), Row(_c0='Written statements for entry in the register (Rule 116):
+see Minutes', words=['written', 'statements', 'for', 'entry', 'in', 'the', 'register', '(rule', '116):', 'see', 'minutes']),
+Row(_c0='Forwarding of texts adopted during the sitting: see Minutes', words=['forwarding', 'of', 'texts',
+'adopted', 'during', 'the', 'sitting:', 'see', 'minutes']), Row(_c0='Dates for next sittings: see Minutes',
+words=['dates', 'for', 'next', 'sittings:', 'see', 'minutes']), Row(_c0='Adjournment of the session',
+words=['adjournment', 'of', 'the', 'session']), Row(_c0='I declare the session of the European Parliament
+adjourned.', words=['i', 'declare', 'the', 'session', 'of', 'the', 'european', 'parliament', 'adjourned.']),
+Row(_c0='(The sitting was closed at 1 p.m.)', words=['(the', 'sitting', 'was', 'closed', 'at', '1', 'p.m.)']),
+Row(_c0='Approval of Minutes of previous sitting: see Minutes', words=['approval', 'of', 'minutes', 'of',
+'previous', 'sitting:', 'see', 'minutes']), Row(_c0='Membership of Parliament: see Minutes',
+words=['membership', 'of', 'parliament:', 'see', 'minutes']), Row(_c0='Request for the defence of
+parliamentary immunity: see Minutes', words=['request', 'for', 'the', 'defence', 'of', 'parliamentary',
+'immunity:', 'see', 'minutes']), Row(_c0='Appointments to committees (proposal by the Conference of
+Presidents): see Minutes', words=['appointments', 'to', 'committees', '(proposal', 'by', 'the', 'conference',
+'of', 'presidents):', 'see', 'minutes']), Row(_c0='Documents received: see Minutes', words=['documents',
+'received:', 'see', 'minutes']), Row(_c0='Texts of agreements forwarded by the Council: see Minutes',
+words=['texts', 'of', 'agreements', 'forwarded', 'by', 'the', 'council:', 'see', 'minutes']), Row(_c0="Action taken
+on Parliament's resolutions: see Minutes", words=['action', 'taken', 'on', "parliament's", 'resolutions:', 'see',
+'minutes']), Row(_c0='Oral questions and written statements (tabling): see Minutes', words=['oral',
+'questions', 'and', 'written', 'statements', '(tabling):', 'see', 'minutes']), Row(_c0='Written statements (Rule
+116): see Minutes', words=['written', 'statements', '(rule', '116):', 'see', 'minutes']), Row(_c0='Agenda: see
+Minutes', words=['agenda:', 'see', 'minutes']), Row(_c0='1.', words=['1.']), Row(_c0='Appointments to
+parliamentary committees (vote): see Minutes', words=['appointments', 'to', 'parliamentary', 'committees',
+'(vote):', 'see', 'minutes']), Row(_c0='Voting time', words=['voting', 'time']), Row(_c0='Agenda for next
+sitting: see Minutes', words=['agenda', 'for', 'next', 'sitting:', 'see', 'minutes']), Row(_c0='Closure of sitting',
+words=['closure', 'of', 'sitting']), Row(_c0='(The sitting was closed at 12 midnight)', words=['(the', 'sitting',
+'was', 'closed', 'at', '12', 'midnight)']), Row(_c0='Opening of the sitting', words=['opening', 'of', 'the',
+'sitting']), Row(_c0='(The sitting was opened at 09.05)', words=['(the', 'sitting', 'was', 'opened', 'at',
+'09.05)']), Row(_c0='Documents received: see Minutes', words=['documents', 'received:', 'see', 'minutes']),
+Row(_c0='Approval of Minutes of previous sitting: see Minutes', words=['approval', 'of', 'minutes', 'of',
+'previous', 'sitting:', 'see', 'minutes']), Row(_c0='1.', words=['1.']), Row(_c0='Protection of passengers
+against displaced luggage (vote)', words=['protection', 'of', 'passengers', 'against', 'displaced', 'luggage',
+'(vote)']), Row(_c0='2.', words=['2.']), Row(_c0='Approval of motor vehicles with regard to the forward field
+of vision of the driver (vote)', words=['approval', 'of', 'motor', 'vehicles', 'with', 'regard', 'to', 'the', 'forward',
+'field', 'of', 'vision', 'of', 'the', 'driver', '(vote)']), Row(_c0='3.', words=['3.']), Row(_c0='EC-Korea Agreement
+on scientific and technological cooperation (vote)', words=['ec-korea', 'agreement', 'on', 'scientific', 'and',
+'technological', 'cooperation', '(vote)']), Row(_c0='4.', words=['4.']), Row(_c0='Mainstreaming sustainability
+in development cooperation policies (vote)', words=['mainstreaming', 'sustainability', 'in', 'development',
+'cooperation', 'policies', '(vote)']), Row(_c0='5.', words=['5.']), Row(_c0='Draft Amending Budget No 1/2007
+(vote)', words=['draft', 'amending', 'budget', 'no', '1/2007', '(vote)']), Row(_c0='7.', words=['7.']),
+Row(_c0='EC-Gabon Fisheries Partnership (vote)', words=['ec-gabon', 'fisheries', 'partnership', '(vote)']),
+Row(_c0='10.', words=['10.']), Row(_c0='Limitation periods in cross-border disputes involving personal
+injuries and fatal accidents (vote)', words=['limitation', 'periods', 'in', 'cross-border', 'disputes', 'involving',
+'personal', 'injuries', 'and', 'fatal', 'accidents', '(vote)']), Row(_c0='12.', words=['12.']), Row(_c0='Strategy for
+a strengthened partnership with the Pacific Islands (vote)', words=['strategy', 'for', 'a', 'strengthened',
+'partnership', 'with', 'the', 'pacific', 'islands', '(vote)']), Row(_c0='13.', words=['13.']), Row(_c0='The
+European private company statute (vote)', words=['the', 'european', 'private', 'company', 'statute', '(vote)']),
+Row(_c0='That concludes the vote.', words=['that', 'concludes', 'the', 'vote.']), Row(_c0='Corrections to
+votes and voting intentions: see Minutes', words=['corrections', 'to', 'votes', 'and', 'voting', 'intentions:',
+'see', 'minutes']), Row(_c0='Assignment conferred on a Member: see Minutes', words=['assignment',
+'conferred', 'on', 'a', 'member:', 'see', 'minutes']), Row(_c0='Membership of committees and delegations:
+see Minutes', words=['membership', 'of', 'committees', 'and', 'delegations:', 'see', 'minutes']),
+Row(_c0='Decisions concerning certain documents: see Minutes', words=['decisions', 'concerning',
+'certain', 'documents:', 'see', 'minutes']), Row(_c0='Forwarding of texts adopted during the sitting: see
+Minutes', words=['forwarding', 'of', 'texts', 'adopted', 'during', 'the', 'sitting:', 'see', 'minutes']),
+Row(_c0='Dates for next sittings: see Minutes', words=['dates', 'for', 'next', 'sittings:', 'see', 'minutes'])]
