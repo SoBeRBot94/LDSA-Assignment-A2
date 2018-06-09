@@ -5,8 +5,7 @@
 import pyspark as pys
 from pyspark.sql import SparkSession
 
-ss = SparkSession.builder.master("local").appName("Question A4").getOrCreate()
-sparkC = pys.SparkContext()
+sparkC = pys.SparkContext().getOrCreate()
 
 file_en = sparkC.textFile("/home/ubuntu/DATA/europarl-v7.bg-en.en")
 file_en.cache()
