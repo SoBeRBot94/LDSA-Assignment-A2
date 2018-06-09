@@ -28,6 +28,12 @@ def install_updates():
     sudo('apt-get -y update')
 
 @task
+def add_ssh_keys():
+    print("\n \n ----- Adding SSH Keys ----- \n \n")
+    put('./id_rsa.pub', '~/.ssh/id_rsa.pub')
+    run('cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys')
+
+@task
 def install_requisites():
     print("\n \n ----- Installing Requisites ----- \n \n")
     sudo('apt-get -y install default-jre scala python3 python3-pip')
@@ -87,12 +93,13 @@ def configure_spark():
 @task
 def clean_up():
     print("\n \n ----- Cleaning Up Junk ----- \n \n")
-    local('rm -rf ./__pycache__')
+    local('rm -rf ./id_rsa.pub ./__pycache__')
 
 @task
 def auto_deploy():
     set_hostname()
     install_updates()
+    add_ssh_keys()
     install_requisites()
     upgrade_pip()
     install_pyspark()
