@@ -1,0 +1,371 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Uppsala University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+% Modified by Elsa Slattegard to fit Uppsala university
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{listings}
+\usepackage{color}
+%----------------------------------------------------------------------------------------
+%	CODE HILIGHTING CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Bash,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+%----------------------------------------------------------------------------------------
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Uppsala University}\\[1.5cm] % Name of your university/college
+\includegraphics[scale=.1]{Uppsala_University_seal_svg.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+\textsc{\Large Large Datasets For Scientific Applications}\\[0.5cm] % Major heading such as course name
+\textsc{\large 1TD268}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Assignment A2}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Sudarsan \textsc{Bhargavan}\\ % Your name
+\end{flushleft}
+
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+\section{A - Working with the RDD API}
+\subsection{Question A.1}
+\begin{enumerate}
+\item Read the English transcripts with Spark and count the number of lines.
+\newline
+\newline
+	\textbf{DataSet: Bulgarian dataset(europarl-v7.bg-en.en)}
+    \\
+    \textbf{Number of Lines:} 406934
+\newline
+\item  Do the same with the other language (so that you have a separate lineage of RDDs for each).
+\newline
+\newline
+	No of Lines mentioned in the repository document : 406934
+    \\
+    \\
+    \textbf{WordCount} Script
+    \begin{lstlisting}
+    //WordCount.sh
+		#!/bin/bash
+
+		lineCount_en=`/usr/bin/wc --lines ./europarl-v7.bg-en.en`
+		lineCount_bg=`/usr/bin/wc --lines ./europarl-v7.bg-en.bg`
+
+		# Print Only The Number of Lines
+
+		output_en=`echo $lineCount_en |/usr/bin/awk '{print $1}'`
+		output_bg=`echo $lineCount_bg |/usr/bin/awk '{print $1}'`
+
+		echo "Line Count of English Dataset: $output_en"
+		echo
+		echo "Line Count of Bulgarian Dataset: $output_bg"
+	\end{lstlisting}
+   	\textbf{Output}
+    \begin{lstlisting}
+    	Line Count of English Dataset: 406934
+
+		Line Count of Bulgarian Dataset: 406934
+    \end{lstlisting}
+\newpage
+\item Verify that the line counts are the same for the two languages.
+\newline
+\newline
+	Verifying the line counts for both the languages yields: \cite{DS}
+    \newline
+    \newline
+    \textbf{Bulgarian}
+    \newline
+		lines\_en = sparkC.textFile("/home/ubuntu/DATA/europarl-v7.bg-en.en") \\
+        lines\_en.count() \\
+        \textbf{406934}
+    \newline
+    \newline
+    \textbf{English}
+    \newline
+    	lines\_bg = sparkC.textFile("/home/ubuntu/DATA/europarl-v7.bg-en.bg") \\
+        lines\_bg.count() \\
+        \textbf{406934}
+\newline
+\item Count the number of partitions.
+\newline
+\newline
+	Trying to find the number of partitions yields:
+    \newline
+    \newline
+    	lines\_en.getNumPartitioins() \\
+        \textbf{2}
+\end{enumerate}
+\subsection{Question A.2}
+\begin{enumerate}
+\item Inspect 100 entries from your RDD to verify your pre-processing.
+\newline
+\newline
+	Inspecting 100 entries from RDD
+    \newline
+    \newline
+    \textbf{Output:}
+    \newline
+    \newline
+    \textbf{For The Output Please See The File}
+    \newline
+    \newline
+    \href{run:./inspectedData.txt}{inspectedData.txt}
+\newpage
+\item Verify that the line counts still match after the pre-processing.
+\newline
+\newline
+	Inspecting line counts after pre-processing still yields the same results for both the languages \\
+    \textbf{406934}
+\end{enumerate}
+\subsection{Question A.3}
+\begin{enumerate}
+\item Use Spark to compute the 10 most frequently according words in the English language corpus. Repeat for the other language.
+\newline
+\newline
+	\textbf{English}
+	\newline
+    \newline
+    Frequent Words List For English : [('the', 698563), ('of', 362452), ('to', 326291), ('and', 293700), ('in', 222084), ('a', 162764), ('is', 157336), ('that', 155812), ('for', 119429), ('I', 108253)]
+	\newline
+    \newline
+    \textbf{Bulgarian}
+    \newline
+    \newline
+    \textbf{See File Referenced Below}
+    \newline
+    \href{run:./frequentsBulgarian.txt}{frequentsBulgarian.txt}
+\newline
+\item Verify that your results are reasonable.
+\newline
+\newline
+	\textbf{After Translation Bulgarian ----- English} \\
+    It was found that many matched with the frequent English words. \\
+    Please See \href{run:./matchedWords.txt}{Matched Frequent Words}
+\end{enumerate}
+\newpage
+\subsection{Question A.4}
+\begin{enumerate}
+\item Do your translations seem reasonable? 
+\newline
+\newline
+	While manually comparing with google translate, the translation seemed reasonable. \\
+    \newline
+    \includegraphics[width=\textwidth]{TaskA_Screenshots/Translations.png}
+\end{enumerate}
+\hrule
+\newpage
+\section{B - Working with DataFrames and SQL}
+\subsection{Question B.1 - Analysis with DataFrames / SQL}
+\begin{enumerate}
+\item Which organization has the largest gender pay gap? Which the least?
+\newline
+\newline
+	\textbf{Largest Gender Pay Gap:}
+    \newline
+    \includegraphics[width=\textwidth]{TaskB_Screenshots/Task_B1_1_a.png}
+    \newline
+    \newline
+    \textbf{Least Gender Pay Gap:}
+    \newline
+    \includegraphics[width=\textwidth]{TaskB_Screenshots/Task_B1_1_b.png}
+\newpage
+\item What is the mean gender pay gap across all organization?
+\newline
+\newline
+	\textbf{Mean Gender Pay Gap:}
+    \newline
+    \includegraphics[width=\textwidth]{TaskB_Screenshots/Task_B1_2.png}
+\newline
+\newline
+\item Export the results of B.1.2 to a CSV file. Inspect the output file to check it looks reasonable.
+\newline
+\newline
+	\textbf{Please See File} \\
+    \href{run:./Task_B_1_3.csv}{csv.file}
+\newline
+\newline
+\item What proportion of organizations pay women more than men on average?
+\newline
+\newline
+	\textbf{Proportion of Organization That Pay Women More:}
+    \newline
+    \includegraphics[width=\textwidth]{TaskB_Screenshots/Task_B1_4.png}
+\end{enumerate}
+\newpage
+\subsection{Question B.2- Advanced DataFrames / SQL}
+\begin{enumerate}
+\item  Create a new column for the industry sector (for each company) using the SIC code:
+\newline
+\newline
+	The \textbf{broadcast} and \textbf{join} variables were used to modify the \textbf{Data Frame}. Also as per the instructions given the \textbf{sic\_codes} with value \textbf{-1} has been ignored. \\
+	\\
+	The \textbf{broadcast} variable is used to maintain a read-only cached data of the variable. Data has been joined as per the required conditions, with help of the \textbf{join} command. \cite{BC}
+\item Compute the mean gender pay gap per sector.
+\newline
+\newline
+	\textbf{Mean Gender Pay Gap:}
+    \newline
+    \includegraphics[width=\textwidth]{TaskB_Screenshots/Task_B2_2_a.png}
+	\newline
+	\newline
+	\includegraphics[width=\textwidth]{TaskB_Screenshots/Task_B2_2_b.png}
+\item How does gender pay equality compare per sector? Compute some additional statistics.
+\newline
+\newline
+	Calculating the mean values yields the following information : \\
+    \newline
+    In some cases \textbf{women} were paid more than \textbf{mean}, but in most cases it was the other way around. \\
+    \newline
+    While calculating median mean per sector the gender pay equality was \textbf{netural}.
+    \newline
+	\includegraphics[width=\textwidth]{TaskB_Screenshots/Task_B2_3_a.png}
+    \newline
+    \newline
+    While calculating the mean per sector of \textbf{mean bonus pay}, it was found that \textbf{women} were paid more.
+    \newline
+    \includegraphics[width=\textwidth]{TaskB_Screenshots/Task_B2_3_b.png}
+    \newline
+    \newline
+    While calculating the median per sector of \textbf{mean bonus pay}, a lot of negative values were found, which according to the references provided, means that \textbf{women} were paid more. \cite{GPGS}
+    \newline
+    \includegraphics[width=\textwidth]{TaskB_Screenshots/Task_B2_3_c.png}
+\end{enumerate}
+\hrule
+\newpage
+\section{C - Spark Clusters and Deployment}
+\begin{enumerate}
+\item Modify a copy of your code from Section A, so that it runs on your cluster.
+\newline
+\newline
+	\textbf{Run Jobs - Cluster Mode}
+    \newline
+    	In order to run a pyspark job in the cluster, the spark master url has to passed to the \textbf{SparkContext} method. \\
+    \begin{lstlisting}
+    //PySparkJobClusterMode.py
+        	#!/usr/bin/env python3
+        	import pyspark as pys
+            sparkC = pys.SparkContext("spark://localhost:7077")
+    \end{lstlisting}
+\item Run your code first without and then with .cache() - and look under the storage tab in the web GUI for your application. What do you notice? Explain briefly what’s going on.
+\newline
+\newline
+	\textbf{Cache}
+    	When the cache method is used, the \textbf{RDD} caches a copy of the imported data, for further operations. \\
+        When we omit the cache method, then the \textbf{RDD} waits for an event to get triggered, after which it loads the data. \cite{CA}
+	\newline
+    \newline
+	\includegraphics[width=\textwidth]{TaskC_Screenshots/Task_C_4.png}
+\newpage
+\item Use the Web GUI to explore your cluster and examine jobs, stages, and tasks. Create an example that requires a job with more than one stage. Explain, with reference to the Spark API methods you invoke in your code, why this is so.
+\newline
+\newline
+	\textbf{Multi-Stage Jobs}
+    \newline
+    	A stage is a smaller set of tasks from a job. Stages can be parallelized if they are independent transformations are actions. \cite{ST}
+	\newline
+    \newline
+    	Here the \textbf{Task A3} has multiple-stages. But they cannot be parallelized because each stage is dependent on each other. \textbf{Stage Id: 0} represents the reduce operation. \textbf{Stage Id: 1} represents the sort operation.
+     \newline
+     \newline
+     \includegraphics[width=\textwidth]{TaskC_Screenshots/Task_C_5.png}
+\end{enumerate}
+\hrule
+\newpage
+%-------------------------
+\bibliography{sources}
+\bibliographystyle{IEEEtran}
+\end{document}
