@@ -23,11 +23,23 @@ def set_hostname():
     sudo('systemctl restart systemd-hostnamed')
     sudo('echo \'spark-master-only\' > /etc/hostname')
     sudo('sed -i \'s/127.0.0.1 localhost.*$/127.0.0.1 localhost spark-master-only/\' /etc/hosts')
+    sudo('echo %s spark-worker >> /etc/hosts' % workerFIP)
 
 @task
 def install_updates():
     print("\n \n ----- Installing Updates ----- \n \n")
     sudo('apt-get -y update')
+
+@task
+def generate_ssh_keypairs():
+    print("\n \n ----- Generating SSH Keys ----- \n \n")
+    run('ssh-keygen -t rsa -P \"\"')
+
+@task
+def fetch_ssh_keys():
+    print("\n \n ----- Adding SSH Keys ----- \n \n")
+    run('cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys')
+    get('~/.ssh/id_rsa.pub', './id_rsa.pub')
 
 @task
 def install_requisites():
@@ -108,6 +120,8 @@ def clean_up():
 def auto_deploy():
     set_hostname()
     install_updates()
+    generate_ssh_keypairs()
+    fetch_ssh_keys()
     install_requisites()
     upgrade_pip()
     install_jupyter()
