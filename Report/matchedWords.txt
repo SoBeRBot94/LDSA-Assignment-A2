@@ -1,1 +1,0 @@
-'с’(from), ‘че’(that), ‘е’(it is), 'от'(from/by/than), 'в'(in/to/into), 'за'(for), 'и'(and)
